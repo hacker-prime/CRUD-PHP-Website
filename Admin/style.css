@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #fff;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+  
+}
+
+.order{
+  width: 500px;
+  margin: 0 auto;
+}
+
+.wrapper .sidebar{
+  width: 210px;
+  height: 100%;
+  /* https://simplicable.com/new/light-colors light-purple */
+  background: #33b5ff;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  cursor: pointer;
+}    
+
+.wrapper .sidebar ul li a{
+  color: #fff;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #33b5ff;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: black;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #33b5ff;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  /* margin: 20px; */
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  /* margin-bottom: 20px; */
+  /* padding:10px; */
+}
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}
+
+.header ul li a.active,
+.header ul li a:hover
+{
+	/* background: #fff; */
+    /* color: #594f8d; */
+    color:black;
+}
+
+
+
+/* Taken from productInfo.php, without it, the icons in the action column are too close to one another among a few other cosmetic issues */
+    
+.wrapper{
+  /* width: 650px; */
+  margin: 0 auto;
+}
+.page-header h2{
+  margin-top: 0;
+}
+table tr td:last-child a{
+  margin-right: 15px;
+}
+
+.pop-content{
+  /* https://www.w3schools.com/howto/howto_css_image_center.asp */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width : 90px;
+  height : 90px;
+
+}
+
+
+
+.form-div { margin-top: 10px; border: 1px solid #e0e0e0; }
+/* #profileDisplay { display: block; height: 250px;margin: 0px auto; border-radius: 50%; } */
+.img-placeholder {
+  width: 60%;
+  color: white;
+  height: 100%;
+  background: black;
+  opacity: .7;
+  height: 210px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.img-placeholder h4 {
+  margin-top: 40%;
+  color: white;
+}
+.img-div:hover .img-placeholder {
+  display: block;
+  cursor: pointer;
+}
+
+/* .alert{
+  background-color: #FF4444;
+  color:white;
+} */
+
+
+/* #profileDisplay2 { display: block; height: 250px; width: 60%; margin: 0px auto; border-radius: 50%; } */
+.img-placeholder2 {
+  width: 60%;
+  color: white;
+  height: 100%;
+  background: black;
+  opacity: .7;
+  height: 250px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.img-placeholder2 h4 {
+  margin-top: 40%;
+  color: white;
+}
+.img-div:hover .img-placeholder2 {
+  display: block;
+  cursor: pointer;
+}
+
+
+/* If the browser window is 540px or smaller: */
+@media screen and (max-width: 530px) {
+
+  .wrapper .sidebar{
+    display:none;
+  }
+
+  .wrapper .main_content{
+    margin-left: 0px;
+  }
+
+  .wrapper .main_content .info div {
+    /* margin-top: 5%; */
+}
+
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #33b5ff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+
+
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.right{
+  color:#33b5ff;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.navButton .right { 
+  right: 3%;
+  top: 1%;
+  position: absolute;
+  font-size: xx-large;
+}
+
+@media only screen and (min-width: 530px) {
+  /* For desktop: */
+  span{
+      display:none; 
+  }
+
+}
